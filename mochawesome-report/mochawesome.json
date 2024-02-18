@@ -1,0 +1,150 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 0,
+    "pending": 0,
+    "failures": 3,
+    "start": "2024-02-18T10:24:09.783Z",
+    "end": "2024-02-18T10:24:10.114Z",
+    "duration": 331,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0fe40071-4600-4a70-baf9-7bb760e13227",
+      "title": "",
+      "fullFile": "/Users/dhianiwidiya/Documents/Bootcamp QA Automation/Sanber-Automation-API/Module/test/suites/booking.suite.js",
+      "file": "/Module/test/suites/booking.suite.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b7d320a3-f5ac-4fb1-9da7-f7f36113d99d",
+          "title": "End to End - Booking",
+          "fullFile": "/Users/dhianiwidiya/Documents/Bootcamp QA Automation/Sanber-Automation-API/Module/test/suites/booking.suite.js",
+          "file": "/Module/test/suites/booking.suite.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "success create booking",
+              "fullTitle": "End to End - Booking success create booking",
+              "timedOut": false,
+              "duration": 126,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const response = await createBooking ()\n    expect((await response).status).to.equal(418)\n    bookingId = (await response).body.bookingId",
+              "err": {
+                "message": "AssertionError: expected 404 to equal 418",
+                "estack": "AssertionError: expected 404 to equal 418\n    at Context.<anonymous> (file:///Users/dhianiwidiya/Documents/Bootcamp%20QA%20Automation/Sanber-Automation-API/Module/test/suites/booking.suite.js:12:48)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+                "diff": "- 404\n+ 418\n"
+              },
+              "uuid": "7b532723-9a4a-4a1b-91d1-2a50a02ebdf3",
+              "parentUUID": "b7d320a3-f5ac-4fb1-9da7-f7f36113d99d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "success get booking",
+              "fullTitle": "End to End - Booking success get booking",
+              "timedOut": false,
+              "duration": 98,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const response = await getBooking.id(bookingId)\n    expect((await response).status).to.equal(418)\n    bookingId = (await response).body.bookingId",
+              "err": {
+                "message": "AssertionError: expected 404 to equal 418",
+                "estack": "AssertionError: expected 404 to equal 418\n    at Context.<anonymous> (file:///Users/dhianiwidiya/Documents/Bootcamp%20QA%20Automation/Sanber-Automation-API/Module/test/suites/booking.suite.js:17:48)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+                "diff": "- 404\n+ 418\n"
+              },
+              "uuid": "a1f7cb6d-4ea5-40f1-9b87-7d86bba7a7b4",
+              "parentUUID": "b7d320a3-f5ac-4fb1-9da7-f7f36113d99d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "success update booking",
+              "fullTitle": "End to End - Booking success update booking",
+              "timedOut": false,
+              "duration": 99,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "let token = await createToken ()\nconst response = await updateBooking(bookingId,token)\n    expect((await response).status).to.equal(418)",
+              "err": {
+                "message": "TypeError: Invalid value \"undefined\" for header \"Cookie\"",
+                "estack": "TypeError [ERR_HTTP_INVALID_HEADER_VALUE]: Invalid value \"undefined\" for header \"Cookie\"\n    at ClientRequest.setHeader (node:_http_outgoing:655:3)\n    at Request.request (node_modules/superagent/lib/node/index.js:801:39)\n    at Request.end (node_modules/superagent/lib/node/index.js:919:8)\n    at Test.end (node_modules/supertest/lib/test.js:118:11)\n    at /Users/dhianiwidiya/Documents/Bootcamp QA Automation/Sanber-Automation-API/node_modules/superagent/lib/request-base.js:266:12\n    at new Promise (<anonymous>)\n    at RequestBase.then (node_modules/superagent/lib/request-base.js:250:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+                "diff": null
+              },
+              "uuid": "044ee2b2-61e4-40a7-97a6-b7067179b83e",
+              "parentUUID": "b7d320a3-f5ac-4fb1-9da7-f7f36113d99d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "7b532723-9a4a-4a1b-91d1-2a50a02ebdf3",
+            "a1f7cb6d-4ea5-40f1-9b87-7d86bba7a7b4",
+            "044ee2b2-61e4-40a7-97a6-b7067179b83e"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 323,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.3.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
